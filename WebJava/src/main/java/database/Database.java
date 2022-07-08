@@ -1,27 +1,32 @@
-package Databaseconfig;
+package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Database {
-	public static Connection connect() throws SQLException, ClassNotFoundException {
+	public Connection conn;
+	public Statement stmt;
 
-        try {
- 	Class.forName("com.mysql.jdbc.Driver"); 
-			//Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/<database_name>", "<user>", "<password>");
-            Connection res = DriverManager.getConnection("jdbc:mysql://localhost:3306/org1", "root", "1234");
-            if (res != null) {
-                System.out.println("Connection working");
-            } else {
-                System.out.println("Failed to make connection!");
-            }
-            return res;
-        } catch (SQLException e) {
-            System.out.println("Connection Failed! Check output console");
-            e.printStackTrace();
-            throw e;
-        }
-    }
+	public Database() 
+	{
+		try {
+			
+		Class.forName("com.mysql.cj.jdbc.Driver");  //load driver
+		 conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/org1","root","1234");
+		 
+		 stmt= conn.createStatement();
+		 
+		}
+		
+		catch(ClassNotFoundException d) {System.out.println("!!1"+ d.getMessage());}
+		catch(SQLException e)           {System.out.println("******"+ e.getMessage());}
+	}
+	
+	public Connection getCon(){		return conn;	}
+	
+	public Statement getS()	{		return stmt;	}
+
 
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="padding:45px">
+
+
+
+<form mathod="post" name="simpleForm" action="validate" onsubmit="return validation()">
+
+Old Pasword<br> <input type="text" name="oldpass"><br>
+Password<br> <input type="text" name="pass"><br>
+
+<p id="inctxt"  hidden style="color:red">Incorrect password!</p>
+ <input type="submit" ><br>
+
+
+</form>
+
+<script type="text/javascript">
+function validation() {
+let oldpass = document.forms['simpleForm']['oldpass'].value;
+let pass = document.forms['simpleForm']['pass'].value;
+
+if(oldpass!=pass){
+	document.getElementById("inctxt").hidden=false
+	return false;
+}
+document.getElementById("inctxt").hidden=true;
+return true;
+}
+
+</script>
+
+</body>
+</html>

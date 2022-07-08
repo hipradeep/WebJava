@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Databaseconfig.Database;
+import database.Database;
 
 /**
  * Servlet implementation class Register
