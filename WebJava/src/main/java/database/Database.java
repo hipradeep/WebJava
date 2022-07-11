@@ -9,24 +9,29 @@ public class Database {
 	public Connection conn;
 	public Statement stmt;
 
-	public Database() 
-	{
+	public Database() {
 		try {
-			
-		Class.forName("com.mysql.cj.jdbc.Driver");  //load driver
-		 conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/org1","root","1234");
-		 
-		 stmt= conn.createStatement();
-		 
-		}
-		
-		catch(ClassNotFoundException d) {System.out.println("!!1"+ d.getMessage());}
-		catch(SQLException e)           {System.out.println("******"+ e.getMessage());}
-	}
-	
-	public Connection getCon(){		return conn;	}
-	
-	public Statement getS()	{		return stmt;	}
 
+			Class.forName("com.mysql.cj.jdbc.Driver"); // load driver
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/org1", "root", "1234");
+
+			stmt = conn.createStatement();
+
+		}
+
+		catch (ClassNotFoundException d) {
+			System.out.println("!!1" + d.getMessage());
+		} catch (SQLException e) {
+			System.out.println("******" + e.getMessage());
+		}
+	}
+
+	public Connection getConneection() {
+		return conn;
+	}
+
+	public Statement getStatements() {
+		return stmt;
+	}
 
 }
