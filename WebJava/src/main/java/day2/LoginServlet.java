@@ -23,10 +23,12 @@ public class LoginServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		PrintWriter out= response.getWriter();
-//		out.println("<h1>username </h1>"+ request.getParameter("username"));
-//		out.println("<h2>password <h2>"+request.getParameter("password"));
-//		
+		PrintWriter out= response.getWriter();
+		String name = request.getParameter("name");
+		String pass = request.getParameter("pass");
+		 out.println("Name - "+name);
+		 out.println("Password - "+ pass);
+		
 		if(request.getParameter("username").equals("pp") && request.getParameter("password").equals("123")) {
 			RequestDispatcher r=request.getRequestDispatcher("/Registration.html");
 			r.include(request, response);
