@@ -17,14 +17,14 @@ import database.Database;
 /**
  * Servlet implementation class ViewAll
  */
-@WebServlet("/ViewAll")
-public class ViewAll extends HttpServlet {
+@WebServlet("/ViewAllw")
+public class ViewAll1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ViewAll() {
+    public ViewAll1() {
         super();
         // TODO Auto-generated constructor stub
     }

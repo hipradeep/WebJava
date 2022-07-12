@@ -1,4 +1,4 @@
-package day1;
+package c1;
 
 import java.io.IOException;
 import java.io.PrintWriter;

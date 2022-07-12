@@ -1,4 +1,4 @@
-package day2;
+package c2_sql;
 
 import java.io.IOException;
 import java.io.PrintWriter;
