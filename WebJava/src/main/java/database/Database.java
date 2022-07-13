@@ -13,7 +13,7 @@ public class Database {
 		try {
 
 			Class.forName("com.mysql.cj.jdbc.Driver"); // load driver
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/org1", "root", "1234");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/clubhouse", "root", "1234");
 
 			stmt = conn.createStatement();
 

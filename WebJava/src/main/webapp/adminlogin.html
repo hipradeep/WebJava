@@ -4,17 +4,22 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body style="padding:60px">
+<body style="padding: 60px">
 
-<h2>Welcome To <span style="font-size: 35px">C</span>lub  <span style="font-size: 35px">H</span>ouse</h2>
-<hr>
+	<h2>
+		Welcome To <span style="font-size: 35px">C</span>lub <span
+			style="font-size: 35px">H</span>ouse
+	</h2>
+	<hr>
 
-<h3> Admin Login</h3>
+	<h3>Admin Login</h3>
 
-UserName <br>
-<input type="text" name="username"/><br>
-Password <br>
-<input type="password" name="password"/><br>
-<input type="submit" />
+	<form action="AdminLogin" method="post">
+
+		UserId <br> <input type="text" name="userid" required="required" /> <br>
+		Password <br> <input type="password" name="password" required="required" /> <br>
+		<br> <input type="submit" />
+
+	</form>
 </body>
 </html>
