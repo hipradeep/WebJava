@@ -34,15 +34,15 @@ public class SearchRecords extends HttpServlet {
 			String sql1 = "select * from student";
 			String sql2="select * from student where rollno="+ rollno;
 			ResultSet rs = st.executeQuery(sql2);
-			out.println(
-							"<b>Id</b>" + "			" + 
-							"<b>Roll No</b>" + "			" + 
-							"<b>Name</b>"+ "			" + 
-							"<b>Address</b>" + "			" + 
-							"<b>Mobile</b>" + "			" + 
-							"<b>Class</b>"	+ "			" + 
-							"<b>Password</b>" + "			");
-			out.println("\n");
+//			out.println(
+//							"<b>Id</b>" + "			" + 
+//							"<b>Roll No</b>" + "			" + 
+//							"<b>Name</b>"+ "			" + 
+//							"<b>Address</b>" + "			" + 
+//							"<b>Mobile</b>" + "			" + 
+//							"<b>Class</b>"	+ "			" + 
+//							"<b>Password</b>" + "			");
+//			out.println("\n");
 			
 			while (rs.next()) {
 				out.println(
