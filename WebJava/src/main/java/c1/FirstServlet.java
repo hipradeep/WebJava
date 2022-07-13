@@ -21,41 +21,40 @@ public class FirstServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		PrintWriter out = response.getWriter();
-		out.println("This is /FirstServlet Servlet");
+		out.println("<h1>This is /FirstServlet Servlet</h1>");
 		String name = request.getParameter("name");
 		String pass = request.getParameter("pass");
+		String action = request.getParameter("action");
 
 //	out.println("<h3>Name - </h3>"+name);
 //	out.println("<h3>Mobile - </h3>"+ mobile);
 
 		// print request data at this servlet
-		// out.println("Name - "+name);
-		// out.println("Password - "+ pass);
-
-		// redirect to next servlet page
+		System.out.println("Name - " + name);
+		System.out.println("Password - " + pass);
+		System.out.println("Action	 - " + action);
 
 		if (name.equals("admin") && pass.equals("1234")) {
-			//url will remain same
-			RequestDispatcher rd = request.getRequestDispatcher("/NextPage");
-			rd.forward(request, response); // redirect to next page
+
+			if (action.equals("forward")) {
+
+				// url will remain same
+				RequestDispatcher rd = request.getRequestDispatcher("/NextPage");
+				rd.forward(request, response); // redirect to next page
+
+			} else {
+				RequestDispatcher rd = request.getRequestDispatcher("/TestInclude.html");
+				rd.include(request, response); // redirect to next page
+				out.println("<b>Name - </b>"+name);
+				out.println("<br>");
+				out.println("<b>Password -</b> "+ pass);
+				out.println("<br>");
+				out.println("<b>Action - </b>" + action);
+			}
+
 		} else {
-
-			// if name and password not match then redirect to the same page
-			//url will rewritten 
-			response.sendRedirect("FirstForm.html");
+			out.println("Wrong information");
 		}
-
-//	if(name.equals("admin") && pass.equals("1234")) {
-//	
-//		RequestDispatcher rd=request.getRequestDispatcher("/TestInclude.html");
-//		rd.include(request, response); // redirect to next page
-//		out.println("Name - "+name);
-//		out.println("Password - "+ pass);
-//		
-//	}else {
-//		out.println("Wrong information");
-//	}
-//	
 
 	}
 

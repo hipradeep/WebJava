@@ -17,12 +17,18 @@ public class NextPage extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out=response.getWriter();
-		out.println("This is /NextPage Servlet");
+		out.println("<h1> This is /NextPage Servlet</h1>");
 		//Receive data from previous servlet, and display here
 		String name=request.getParameter("name");
 		String pass=request.getParameter("pass");
-		out.println("Name - "+name);
-		out.println("Password - "+ pass);
+		
+		
+		String action = request.getParameter("action");
+		out.println("<b>Name - </b>"+name);
+		out.println("<br>");
+		out.println("<b>Password -</b> "+ pass);
+		out.println("<br>");
+		out.println("<b>Action - </b>" + action);
 	}
 
 }
