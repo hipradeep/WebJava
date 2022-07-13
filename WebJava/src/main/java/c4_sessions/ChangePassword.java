@@ -33,14 +33,14 @@ public class ChangePassword extends HttpServlet {
 		try {
 			String password = request.getParameter("password");
 			int rollno;
-			HttpSession hs = request.getSession();
+			HttpSession hs = request.getSession(false);
 			if (hs == null) {
 				// Session is not created.
 				out.println("User Not LoghedIn!");
 
 			} else {
 				// Session is already created.
-
+				System.out.println("Session is already exits!");
 				rollno = (int) hs.getAttribute("rollnumber");
 				Database db = new Database();
 				Connection conn = db.getConneection();

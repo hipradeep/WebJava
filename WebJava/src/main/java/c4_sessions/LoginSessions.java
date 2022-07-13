@@ -45,12 +45,16 @@ public class LoginSessions extends HttpServlet {
 			
 			ResultSet rs=ps.executeQuery();
 			
+			//there is only one record
 			if(rs.next()) {
 				
 				if(rollno == rs.getInt(1) && password.equals(rs.getString(2)) ) {
 					System.out.println("PS:  Roll No - "+rs.getInt(1)+ " Passworrd -  "+ rs.getString(2));
 					
 					HttpSession hs= request.getSession();
+					System.out.println(hs);
+					System.out.println(hs.getId());
+					System.out.println(hs.getCreationTime());
 					hs.setAttribute("rollnumber", rollno);
 					//hs.setAttribute("password", password);
 					
