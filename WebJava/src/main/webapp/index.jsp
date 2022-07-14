@@ -4,7 +4,7 @@
 	pageEncoding="ISO-8859-1"%>
 
 <!-- page directives to import packages -->
-<%@page import="java.util.*"%>
+<%@page import="java.util.*, pack1.Dummy"%>
 
 
 <!DOCTYPE html>
@@ -46,7 +46,20 @@
 
     <!-- Include File   -->
     <%@include file="TestInclude.jsp" %><br>
-
+    
+    
+    <p>-------------------</p>
+    <!-- print data from java class -->
+    
+    <h4>Print java class data</h4>
+    <%
+    Dummy d=new Dummy();
+    
+    out.println("Sum - "+d.sum(12, 10));
+    out.println(" <br>Course ID - "+d.COURSE_ID);
+    
+    
+    %>
 
 
 </body>

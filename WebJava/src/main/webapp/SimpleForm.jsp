@@ -13,6 +13,7 @@
 	<hr>
 
 	<h4>Send data to same page</h4>
+	
 	<form>
 		Name <input text="text" name="pname"> <br> 
 		Phone <input text="text" name="phone"> <br> 
@@ -29,7 +30,8 @@
 
     <hr>
 
-  <h4>Send data to Next page</h4>
+    <h4>Send data to Next page</h4>
+    
     <form action="FormData.jsp">
         Name <input text="text" name="pname"> <br> 
         Phone <input text="text" name="phone"> <br> 
@@ -37,10 +39,6 @@
     </form>
 
     
-
-
-
-
 
 </body>
 </html>
