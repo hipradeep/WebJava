@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -45,13 +46,16 @@ public class AdminLogin extends HttpServlet {
 //			}
 			
 			if (rs.next()) {
-
+				
+				System.out.println("UserId- " + rs.getString(2) + " Passworrd -  " + rs.getString(3));
+				
 				if (userid.equals(rs.getString(2)) && password.equals(rs.getString(3))) {
 					
-					out.println("UserId- " + rs.getString(2) + " Passworrd -  " + rs.getString(3));
+					RequestDispatcher rd = request.getRequestDispatcher("/admindashboard.html");
+					rd.forward(request, response); 
 					
 				} else {
-					System.out.println("UserId- " + rs.getString(2) + " Passworrd -  " + rs.getString(3));
+					
 					response.sendRedirect("adminlogin.html");
 				}
 
