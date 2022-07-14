@@ -5,31 +5,52 @@
 	id="WebApp_ID" version="4.0">
 	<display-name>WebJava</display-name>
 
+  
+        <!--Servlet Mapping Day2 -->
+        <!-- Only one way of mapping will work either 'web.xml' or @WebServlet("/TestInitParam") not both at same time -->
+
+<!--    
+    <servlet>
+        <servlet-name>FirstServlet</servlet-name>
+        <servlet-class>c1.FirstServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>FirstServlet</servlet-name>
+        <url-pattern>/FirstServlet</url-pattern>
+    </servlet-mapping>
+ -->    
+    
+     
+     
+     
+      <!-- Initialise Global Parameter -->
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.mysql.cj.jdbc.Driver</param-value>
+    </context-param>  
+    
+     <!-- Initialise Local Init Parameter -->
+    
+ <!-- 
+    <servlet>
+        <servlet-name>TestInitParam</servlet-name>
+        <servlet-class>c5_init_param.TestInitParam</servlet-class>
+        <init-param>
+        <param-name>referral</param-name>
+        <param-value>REF434</param-value>
+        
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>TestInitParam</servlet-name>
+        <url-pattern>/TestInitParam</url-pattern>
+    </servlet-mapping> 
+    
+    -->
 
 
-	<!--Servlet Mapping Day2 -->
-
-<!-- 	<servlet>
-		<servlet-name>First Servlet</servlet-name>
-		<servlet-class>c1.FirstServlet</servlet-class>
-	</servlet>
-	
-	<servlet-mapping>
-		<servlet-name>First Servlet</servlet-name>
-		<url-pattern>http://localhost:8080/WebJava/FirstServlet</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>First Servlet2</servlet-name>
-		<servlet-class>day1.FirstServlet2</servlet-class>
-	</servlet>
-	
-	<servlet-mapping>
-		<servlet-name>First Servlet2</servlet-name>
-		<url-pattern>http://localhost:8080/WebJava/FirstServlet2</url-pattern>
-	</servlet-mapping>
-	
-	 -->
 
 
 	<!-- Exception Handling -->

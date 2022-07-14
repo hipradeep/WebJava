@@ -28,6 +28,13 @@ public class TestInitParam extends HttpServlet {
 		out.println("Username - "+getInitParameter("username"));
 		out.println("Password - "+getInitParameter("password"));
 		
+		//getting init parameter from deployment descriptor(web.xml)
+		//out.println("Referral - "+getInitParameter("referral"));
+		
+		// assessing the global parameters
+		out.println("Driver - "+getServletContext().getInitParameter("driver"));
+		
+		
 
 		
 	}
