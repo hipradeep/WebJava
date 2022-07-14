@@ -32,7 +32,7 @@
 	%>
 
 	<!-- JSP Declaration Tag that declares field  -->
-	<%!int data = 50;%>
+	<%! int data = 50;%>
 	
 	<!--  JSP Expression Tag is written to the output stream of the response or to say print -->
 	<%="Value of the variable is:" + data%>
@@ -42,6 +42,10 @@
 		return n * n * n;
 	}%>
 	<%="Cube of 3 is:" + cube(3)%>
+
+
+    <!-- Include File   -->
+    <%@include file="TestInclude.jsp" %><br>
 
 
 
