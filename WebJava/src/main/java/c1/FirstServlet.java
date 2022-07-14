@@ -26,8 +26,8 @@ public class FirstServlet extends HttpServlet {
 		String pass = request.getParameter("pass");
 		String action = request.getParameter("action");
 
-//	out.println("<h3>Name - </h3>"+name);
-//	out.println("<h3>Mobile - </h3>"+ mobile);
+		//	out.println("<h3>Name - </h3>"+name);
+		//	out.println("<h3>Mobile - </h3>"+ mobile);
 
 		// print request data at this servlet
 		System.out.println("Name - " + name);

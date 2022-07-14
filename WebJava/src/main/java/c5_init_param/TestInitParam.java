@@ -34,9 +34,12 @@ public class TestInitParam extends HttpServlet {
 		// assessing the global parameters
 		out.println("Driver - "+getServletContext().getInitParameter("driver"));
 		
-		
 
-		
 	}
 
 }
+
+
+// Username - hipradeep
+//Password - abc123
+//Driver - com.mysql.cj.jdbc.Driver
