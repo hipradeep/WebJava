@@ -11,7 +11,6 @@
 	<h3>Simple Form : Received Data </h3>
 	<hr>
 
-
 	<b>Name</b>
 	<br>
 	<%=request.getParameter("pname")%>

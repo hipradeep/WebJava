@@ -11,7 +11,7 @@
 	<h3>Patient Form</h3>
 	<hr>
 
-	  <form action="patientControll.jsp">
+	  <form action="PatientCtrl.jsp">
         ID <input text="text" name="id"> <br> 
         Name <input text="text" name="pname"> <br> 
         Phone <input text="text" name="phone"> <br> 

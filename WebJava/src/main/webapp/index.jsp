@@ -11,12 +11,30 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>JSP</title>
+<style>
+h2 {
+	display: inline;
+}
+
+ul li {
+	display: inline-block;
+	font-size: 22px;
+}
+</style>
+
 </head>
 <body>
 <body style="padding: 60px">
 	<h1>WebJava</h1>
+
 	<h2>Welcome To JSP</h2>
+
+
+	<ul>
+		<li><a href="SimpleForm.jsp">Simple Form</a></li>
+		<li><a href="Patient.jsp">Patient</a></li>
+	</ul>
 	<hr>
 
 	<!-- JSP Scripting Tag - to print something -->
@@ -32,34 +50,34 @@
 	%>
 
 	<!-- JSP Declaration Tag that declares field  -->
-	<%! int data = 50;%>
-	
+	<%!int data = 50;%>
+
 	<!--  JSP Expression Tag is written to the output stream of the response or to say print -->
 	<%="Value of the variable is:" + data%>
 
-    <br>
+	<br>
 	<%!int cube(int n) {
-		return n * n * n;
-	}%>
+	return n * n * n;
+}%>
 	<%="Cube of 3 is:" + cube(3)%>
 
 
-    <!-- Include File   -->
-    <%@include file="TestInclude.jsp" %><br>
-    
-    
-    <p>-------------------</p>
-    <!-- print data from java class -->
-    
-    <h4>Print java class data</h4>
-    <%
-    Dummy d=new Dummy();
-    
-    out.println("Sum - "+d.sum(12, 10));
-    out.println(" <br>Course ID - "+d.COURSE_ID);
-    
-    
-    %>
+	<!-- Include File   -->
+	<%@include file="TestInclude.jsp"%><br>
+
+
+	<p>-------------------</p>
+
+	<!-- print data from java class -->
+
+	<h4>Print java class data</h4>
+	<%
+	Dummy d = new Dummy();
+
+	out.println("Sum - " + d.sum(12, 10));
+	out.println(" <br>Course ID - " + d.COURSE_ID);
+	%>
+
 
 
 </body>
