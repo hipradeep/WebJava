@@ -26,7 +26,7 @@ public class Database {
 		}
 	}
 
-	public Connection getConneection() {
+	public Connection getConnection() {
 		return conn;
 	}
 
