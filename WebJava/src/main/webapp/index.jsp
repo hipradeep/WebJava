@@ -19,7 +19,7 @@ h2 {
 
 ul li {
 	display: inline-block;
-	margin-right: 20px;
+	margin-right: 16px;
 }
 
 </style>
@@ -38,6 +38,7 @@ ul li {
 		<li><a href="JSPForwordTagExample.jsp">JSP Forward Tag Example</a></li>
 		<li><a href="JSPIncludeTagExample.jsp">JSP Include Tag Example</a></li>
 		<li><a href="ExprassionLanguage.jsp">JSP Expression Language</a></li>
+		<li><a href="ExceptionHandle.jsp">Exception Handle</a></li>
 	</ul>
 	<hr>
 

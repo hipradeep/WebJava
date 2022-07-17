@@ -48,11 +48,12 @@ it will not evaluate any of EL
 	<br>
 	
 	
-	 \${"This Sentance Will Not Evaluate, Print as it is"}
+	 \${"This Sentance will not Evaluate, Print as it is"}
 	
 	
 	<!-- References -->
-	<br><a href="https://www.javatpoint.com/EL-expression-in-jsp">References</a>
+	<br>
+	<a href="https://www.javatpoint.com/EL-expression-in-jsp">References</a>
 	
 	
 </body>
