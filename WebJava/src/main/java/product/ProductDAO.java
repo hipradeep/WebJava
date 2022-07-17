@@ -28,6 +28,7 @@ public class ProductDAO {
 			ps.setString(5, p.getVendor());
 			ps.executeUpdate();
 		} catch (Exception d) {
+			
 		}
 		System.out.println(" hey cursor is comimng to this page " + p.getPid());
 	}

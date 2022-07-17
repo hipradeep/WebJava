@@ -2,12 +2,14 @@ package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Database {
 	public Connection conn;
 	public Statement stmt;
+	
 
 	public Database() {
 		try {
@@ -16,6 +18,7 @@ public class Database {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/org1", "root", "1234");
 
 			stmt = conn.createStatement();
+	
 
 		}
 
