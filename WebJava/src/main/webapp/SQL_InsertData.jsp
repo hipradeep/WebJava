@@ -15,27 +15,48 @@
 <body style="padding: 60px;">
     <h2>Welcome To JSTL</h2>
     <hr>
-
-
-
-    <i>SQL Connection, Insert Data</i>
+    
+     <i>SQL Connection, Insert Data</i>
     <br>
+    
+    <form id="bookform">
+    ISBN <input type="text" name="ISBN" /><br>
+    Book Name <input type="text" name="bname" /><br>
+    Author Name <input type="text" name="aname" /><br>
+    Price <input type="text" name="price" /><br>
+    Quantity <input type="text" name="qty" /><br>
+    <input type="submit">
+   
+    </form>
+    
+    <script type="text/javascript">
+    
+    document.getElementById("bookform").reset();
+    
+    </script>
+    
+    
+    
     <!-- SQL Connection And Access Data -->
     <sql:setDataSource var="con" driver="com.mysql.cj.jdbc.Driver"
         url="jdbc:mysql://localhost:3306/org1" user="root" password="1234" />
-        
+       
+     <c:if test="${not empty param.ISBN  }">
+      
+    
     <sql:update dataSource="${con}" var="rs">
     insert into books(ISBN, bname, aname, price, qty) values(?, ?, ?, ? ,?)
     
-    <sql:param  value="ASV66"/>
-    <sql:param  value="PHP Hand Book"/>
-    <sql:param  value="HGT Publication"/>
-    <sql:param  value="500"/>
-    <sql:param  value="${2 }"/>
+    <sql:param  value="${param.ISBN}"/>
+    <sql:param  value="${param.bname}"/>
+    <sql:param  value="${param.aname}"/>
+    <sql:param  value="${param.price}"/>
+    <sql:param  value="${param.qty}"/>
  
     </sql:update>
+    </c:if>
     
-    
+      <br>  <br>  <br>
     <i>SQL Connection, Access Data</i>
     <br>
     <!-- SQL Connection And Access Data -->
