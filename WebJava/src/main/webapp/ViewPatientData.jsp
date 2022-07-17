@@ -21,6 +21,7 @@
 	Name -
 	<%-- <jsp:getProperty property="pname" name="p" /><br> --%> 
 	<%= p.getPname() %> <br>
+	<%= p.getPnameInCap() %> <br>
 	Phone -
 	<jsp:getProperty property="phone" name="p" /><br> 
 	Address -

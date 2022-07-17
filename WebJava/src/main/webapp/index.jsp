@@ -19,11 +19,13 @@ h2 {
 
 ul li {
 	display: inline-block;
+	margin-right: 20px;
 }
+
 </style>
 
 </head>
-<body>
+
 <body style="padding: 60px">
 	<h1>WebJava</h1>
 
@@ -33,6 +35,9 @@ ul li {
 	<ul>
 		<li><a href="SimpleForm.jsp">Simple Form</a></li>
 		<li><a href="Patient.jsp">Patient</a></li>
+		<li><a href="JSPForwordTagExample.jsp">JSP Forward Tag Example</a></li>
+		<li><a href="JSPIncludeTagExample.jsp">JSP Include Tag Example</a></li>
+		<li><a href="ExprassionLanguage.jsp">JSP Expression Language</a></li>
 	</ul>
 	<hr>
 
