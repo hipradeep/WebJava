@@ -16,7 +16,8 @@
 	<h2>Welcome To JSTL</h2>
 
 	<ul>
-		<li><a href="SQLConnectivity.jsp">SQL Connectivity</a></li>
+		<li><a href="SQL_ViewData.jsp">SQL View Data</a></li>
+		<li><a href="SQL_InsertData.jsp">SQL Insert Data</a></li>
 
 	</ul>
 	<hr>
