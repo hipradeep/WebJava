@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Patient Form</title>
 </head>
 <body style="padding: 60px">
 
@@ -12,7 +12,7 @@
 	<hr>
 
 	  <form action="PatientCtrl.jsp">
-        ID <input text="text" name="id"> <br> 
+        ID <input text="number" name="id"> <br> 
         Name <input text="text" name="pname"> <br> 
         Phone <input text="text" name="phone"> <br> 
         Address <input text="text" name="address"> <br> 

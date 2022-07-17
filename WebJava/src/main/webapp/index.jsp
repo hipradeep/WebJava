@@ -19,7 +19,6 @@ h2 {
 
 ul li {
 	display: inline-block;
-	font-size: 22px;
 }
 </style>
 

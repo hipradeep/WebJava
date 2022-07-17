@@ -1,9 +1,9 @@
 package pack1;
 
-public class Product {
+public class Patient {
 	
 	int id;
-	String name;
+	String pname;
 	String phone;
 	String address;
 	public int getId() {
@@ -12,11 +12,12 @@ public class Product {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+
+	public String getPname() {
+		return pname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setPname(String pname) {
+		this.pname = pname;
 	}
 	public String getPhone() {
 		return phone;
@@ -29,6 +30,14 @@ public class Product {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	
+	public int extraMethod(int a) {
+		return  a*a;
+	}
+	
+	public String getPnameInCap() {
+		return pname.toUpperCase();
 	}
 	
 
