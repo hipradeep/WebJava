@@ -16,11 +16,9 @@
 	</jsp:useBean>
 
 	<%
-	
-	ProductDAO dao= new ProductDAO(p);
-    dao.addProduct();
-    
-    %>
+	ProductDAOImpl dao= new ProductDAOImpl(p);
+		    dao.addProduct();
+	%>
 
 
 </body>
