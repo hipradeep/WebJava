@@ -6,6 +6,7 @@
 
 <!-- Adding JSTL SQL -->
 <%@taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
+<%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
